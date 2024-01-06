@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title>先贤志_何孟雄</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--main style-->
+        <link rel="stylesheet" type="text/css" media="screen" href="../pagestyle/style.css" >
+        <!--js-->
+        <script src="../d3/d3.js"></script>
+
+        
+    </head>
+
+    <body>
+        <div class="renwuxiangqing">
+            <div class="header">
+                <div>
+                  <img src="../home/pictures/logo_title.png" alt="Logo_title" style="width:50%; padding:10px">
+                </div>
+              
+                <!--导航栏-->
+                    <div class="topnav">
+                        <a href="../home/home.html">首页</a>
+                        <a href="../search/search/search_index/search.html">搜索入口</a>
+                        <a href="../search/search/search_index/index_renwu.html">人物列表</a>
+                        <a href="../contact and events/events.html">历史事件</a>
+                        <a href="../contact and events/contact.html">联系我们</a>
+                    </div>
+            </div>
+            <div class="page_body">
+                <div class="body_left">
+                    <div class="xximg">
+                        <img src="../mydata/xximgs/hemengxiong.jpg" alt="图像加载失败" width="200px" height="275px">
+                    </div>
+                </div>
+                <div class="body_mid">
+                    <div class="xxintro">
+                        <h1>何孟雄</h1>
+                        <div id="text-container" data-textfile="../mydata/xxintro/B15 沈雁冰.txt"></div>
+                        <script src="../loadtext/loadtext.js"></script>
+                    </div>
+                    <div class="intro_table">
+                        <div id="tableContainer">
+                            <div class="table-scroll">
+                                <table id="Table_record" data-csvfile="../mydata/records/record_csv/8hemengxiong.csv">
+                                    <!-- 表格内容将由JavaScript生成 -->
+                                </table>
+                            </div>
+                        </div>
+                        <script src="../loadtable/loadtable.js"></script>
+                        <script>
+                            LoadCSV("Table_record");
+                        </script>
+                    </div>
+                </div>
+                <div calss="body_right">
+                    <div class="map">
+                        <div id="trajectory_container" >
+                            <script>
+                                var width = 500;
+                                var height = 375;                                
+
+                                var svg = d3.select("#trajectory_container").append("svg")
+                                    .attr("width",width)
+                                    .attr("height",height)
+                                                                  
+
+                                const g = svg.append("g");    
+                                
+                                //定义地图的投影
+                                var projection = d3.geoMercator()
+                                .center([104, 38])
+                                .scale(460)
+                                .translate([width/2, height/2]);
+
+                                //定义地形路径生成器
+                                var path = d3.geoPath()
+                                .projection(projection); //设定投影
+
+                                console.log(path);                                
+                                
+                                //请求world.json
+                                d3.json("../mydata/geo/PRC.json").then(function(data){
+                                    console.log(data);
+                                    g.selectAll("path")
+                                        .data(data.features)
+                                        .join("path")
+                                        .attr("class","path")
+                                        .attr("d",path)
+                                        .attr("fill","none")                                
+                                        .attr("stroke","black")                                        
+                                        .attr("stroke-width", 0.5);
+                                         
+                                    loadActivityData(); // 绘制路径                                     
+                                });
+
+                                // 从数据文件中绘制路径
+                                function drawPaths(activityData) {
+                                    // 按时间顺序排序数据
+                                    activityData.sort((a, b) => new Date(a.时间) - new Date(b.时间));
+
+                                    // 绘制路径
+                                    const lineGenerator = d3.line()
+                                        .x(d => projection([d.经度, d.纬度])[0])
+                                        .y(d => projection([d.经度, d.纬度])[1]);
+
+                                    g.append("path")
+                                        .data([activityData])
+                                        .attr("class", "activity-path")
+                                        .attr("d", lineGenerator)
+                                        .attr("fill", "none")
+                                        .attr("stroke", "#FF7F50")
+                                        .attr("stroke-width", 1);
+
+                                    // 绘制地点圆点
+                                    g.selectAll(".location-dot")
+                                    .data(activityData)
+                                    .enter().append("circle")
+                                    .attr("class", "location-dot")
+                                    .attr("cx", d => projection([d.经度, d.纬度])[0])
+                                    .attr("cy", d => projection([d.经度, d.纬度])[1])
+                                    .attr("r", 3) // 圆点半径
+                                    .attr("fill", "red")
+                                    .on("mouseover", handleMouseOver)
+                                    .on("mouseout", handleMouseOut);
+                                }
+
+                                // 加载人物活动数据
+                                function loadActivityData() {
+                                    d3.json("../mydata/records/record_json/8hemengxiong.json").then((activityData) => {
+                                        console.log(activityData)
+                                        drawPaths(activityData);
+                                    });
+                                }
+
+                                function handleMouseOver(event, hoveredData) {
+                                    d3.json("../mydata/records/record_json/8hemengxiong.json").then((activityData) => {
+                                        console.log(activityData)
+                                    const sameLocationData = activityData.filter(d => d.经度 === hoveredData.经度 && d.纬度 === hoveredData.纬度);
+                                    const combinedDescriptions = combineDescriptions(sameLocationData);
+                                
+                                    const tooltip = d3.select("body").append("div")
+                                        .attr("class", "tooltip")
+                                        .style("position", "absolute")
+                                        .style("background-color", "white")
+                                        .style("padding", "5px")
+                                        .style("border", "1px solid #ccc")
+                                        .style("border-radius", "5px")
+                                        .style("pointer-events", "none")
+                                        .html(`<strong>${hoveredData.地点}</strong><br>${combinedDescriptions}`);
+                                
+                                    tooltip.style("left", (event.pageX + 10) + "px")
+                                        .style("top", (event.pageY - 10) + "px");
+                                    });
+                                }
+                                
+                                function handleMouseOut() {
+                                    d3.select(".tooltip").remove();
+                                }
+                                
+                                function combineDescriptions(dataList) {
+                                    let combinedDescription = "";
+                                    dataList.forEach(data => {
+                                        combinedDescription += `${data.时间} ${data.描述}<br>`;
+                                    });
+                                    // 移除最后一个逗号和空格
+                                    combinedDescription = combinedDescription.slice(0, -2);
+                                    return combinedDescription;
+                                }
+
+                                function zoomed(event) {
+                                    g.attr("transform", event.transform);
+                                }
+                                svg.call(d3.zoom().on("zoom", zoomed));                                
+                            </script>
+                        </div>
+                    </div>
+                    <div style="margin-top: -120px;">
+                        <p style="font-family: '宋体', Times, serif;font-size:15px">点击地图上的点和缩放以查看详细信息</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="page_bar">
+                <p style="font-family: '宋体', Times, serif;
+                        font-size: 15px;
+                        color:#d0d0d0;
+                        text-align:center">北京大学早期共产党员及革命人物档案网站<br>23秋信架构第九组</p>
+            </div>
+        </div>
+    </body>
+</html>

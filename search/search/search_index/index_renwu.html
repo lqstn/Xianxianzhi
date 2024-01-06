@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 20px auto; 
+    }
+
+
+    .filter-dropdown {
+      width: 100px;
+      height: 40px;
+      margin-left: 10px;
+    }
+
+    .person {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+      display: block;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+    
+
+    .person h2 {
+      color: #333333;
+      margin-bottom: 5px;
+      font-family: Arial, sans-serif; /* 设置字体类型 */
+      font-size: 20px; /* 设置字号 */
+    }
+
+    .person p {
+      margin: 0;
+      color: #333333;
+      font-family: "Microsoft YaHei", sans-serif; /* 设置字体类型 */
+      font-size: 16px; /* 设置字号 */
+    }
+
+    * {
+      box-sizing: border-box;
+      }
+  
+      .body {
+      margin: 0;
+      }
+  
+  /* 设置页眉的样式 */
+  .header {
+    background-color: #670000;
+    padding: 10px;
+  }
+  
+  /* 设置顶部导航栏的样式 */
+  .topnav {
+    overflow: hidden;
+    background-color: #d0d0d0;
+  }
+  
+  /* 设置 topnav 链接的样式 */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* 改变鼠标悬停时的颜色 */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+    /* 改变鼠标悬停时的颜色 */
+    .person:hover {
+    background-color: #0a84f72c;
+    color: black;
+  }
+  /* 创建并排的非等列 */
+  .column {
+    float: left;
+    width: 49%;
+    padding: 15px;
+  }
+  
+  /* 清除列之后的浮动 */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* 响应式布局 - 堆叠而非并排 */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  .item1 { grid-area: building; }
+  .item2 { grid-area: introduction; }
+  .item3 { grid-area: someone; }
+  .item4 { grid-area: timeline; }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'building building introduction introduction someone someone'
+      'building building introduction introduction someone someone'
+      'building building timeline timeline timeline timeline';
+    grid-gap: 0px;
+    padding: 5px;
+  }
+  
+  .grid-container > div {
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  
+
+  </style>
+  <title>人物列表</title>
+</head>
+<body >
+  <!--顶部页眉-->
+  <div class="header">
+    <div>
+      <img src="../../../home/pictures/logo_title.png" alt="Logo_title" style="width:50%; padding:10px">
+    </div>
+  </div>
+<!--导航栏-->
+    <div class="topnav">
+        <a href="../../../home/home.html">首页</a>
+        <a href="search.html">搜索入口</a>
+        <a href="index_renwu.html">人物列表</a>
+        <a href="../../../contact and events/events.html">历史事件</a>
+        <a href="../../../contact and events/contact.html">联系我们</a>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/baohuiseng.html" text-decoration="none"><h2>包惠僧</h2></a>
+      <p><strong>简介:</strong> 包惠僧，又名鲍一德，1894年-1979年，湖北黄冈人，受陈独秀委派，包惠僧出席1921年7月23日开幕的中国共产党第一次全国代表大会，1927年大革命失败后脱党，南昌起义后脱党，后曾任国民党军事委员会秘书、国民党内政部人口局局长等职。1949年11月从澳门回到北京，1957年4月起任国务院参事武汉党的早期组织成员。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/chenderong.html"><h2>陈德荣</h2></a>
+      <p><strong>简介:</strong> 陈德荣，1902年-1969年，广东文昌人。北京党的早期组织成员。1918年入北京大学哲学系当旁听生。1920年10月参加北京党的早期组织后，曾任《劳动音》周刊的编辑。1921年7月初，被北洋军阀政府逮捕。1922年3月被蔡元培保释出狱。随后脱党。1947年任海南昌江县县长。后随国民党退居台湾。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/chenduxiu.html"><h2>陈独秀</h2></a>
+      <p><strong>简介:</strong> 陈独秀，1879年—1942年，安琥怀宁人，革命家、学者，上海党的早期组织成员。1917年起任北京大学教授和文科学长。创办《新青年》杂志，高举民主与科学的旗帜，是五四新文化运动的主要倡导者。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/chengongbo.html"><h2>陈公博</h2></a>
+      <p><strong>简介:</strong> 陈公博，1892年-1946年，广东南海人，广州党的早期组织成员。中共一大代表。1923年因投靠军阀陈炯明被开除党籍。1925年加入国民党。曾任国民革命军总司令部政务局局长等职。1938年随汪精卫叛国投敌。曾任汪伪政府立法院院长、伪国民政府代主席等职。抗战胜利后逃往日本。后被押解回国。</p>
+    </div>
+    <div class="person">
+      <a href="../../../pages_renwu/dengzhongxia.html"><h2>邓中夏</h2></a>
+      <p><strong>简介:</strong> 邓中夏，1894年-1933年，湖南宜章人，革命家，北京党的早期组织成员。中国早期工人运动的重要领袖,中国共产党创始人之一.1923年毕业于北京大学哲学系。五四时期北京学生运动的重要领导人。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/fanhongjie.html"><h2>范鸿劼</h2></a>
+       <p><strong>简介:</strong> 范鸿劼，笔名名汀、雁汀、大通，1897年—1927年，湖北鄂城人。革命家，北京党的早期组织成员。1918至1925年在北京大学学习。参与发起“北京大学马克思学说研究会”。1922年出任中国共产党北京地委委员长等职，为北京地区和北京大学中共党组织的早期领导人之一。1927年4月28日和李大钊等一起被反动军阀杀害。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/gaojunyu.html"><h2>高君宇      </h2></a>
+      <p><strong>简介:</strong>高君宇，1896年—1925年，山西静乐人。革命家，北京党的早期组织成员。1922年毕业于北京大学地质系。五四运动的组织者之一，参与组织“北京大学马克思学说研究会”。1922年担任中国社会主义青年团北京地委第一任书记。1923年负责编辑中共中央机关刊物《向导》。在中国共产党第二次全国代表大会上当选为中央委员，又任中央执行委员会委员。并在第一次国共合作中发挥了重要作用。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/hemengxiong.html"><h2>何孟雄</h2></a>
+      <p><strong>简介:</strong> 何孟雄，原名定礼，字国正，号孟雄，1898年—1931年，湖南酃县人。革命家，北京党的早期组织成员。1919至1925年在北京大学学习。为中国共产党第一次代表大会前北京党支部的成员。1922年组织领导了京绥铁路大罢工。历任中共北京、湖北、上海等地区组织的领导人。1931年2月7日被国民党军警杀害于上海龙华。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/lidazhao.html"><h2>李大钊</h2></a>
+       <p><strong>简介:</strong> 李大钊，1889年—1927年，河北乐亭人。著名的马克思主义理论家、政治学家、历史学家、无产阶级革命家、学者，北京党的早期组织成员。1918年起任北京大学图书馆主任，史学、政治学等系教授。马克思主义在中国最早的传播者。中国共产主义运动的先驱和中国共产党的主要创始人之一。中国共产党早期活动的重要领导者。曾任北京《晨钟报》主编、《甲寅》日刊编辑。1927年4月28日在北京英勇就义。论著编为《守常文集》、《李大钊文集》等。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/liji.html"><h2>李季</h2></a>
+      <p><strong>简介:</strong>李季，又名原博、卓之，字懋猷，号协梦、移山郎，1892年-1967年，湖南平江人。马克思主义在中国的早期传播者之一，社会学家、翻译家，上海党的早期组织成员（后加入托派）。1918年毕业于北京大学英文系。1930年12月参加了陈独秀组织的81人签名并发表的《我们的意见书》。之后宣布退出托派组织，一心从事翻译和教学工作。从1918年至1964年从事译著工作，出版600万字以上。新中国成立后任国家出版总署特约翻译。著有《马克思——其生平、其著作及其学说》等；译有《社会主义史》、《马克思恩格斯通讯集》、《现代资本主义》等。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/limeigeng.html"><h2>李梅羹</h2></a>
+      <p><strong>简介:</strong> 李梅羹，又名李兴炽，1901年-1934年，湖南浏阳人。1918年考入北京医专，后转入北京大学德文系学习。参加过五四运动，是北京大学马克思学说研究会发起人之一，北京共产党小组成员。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/liurenjing.html"><h2>刘仁静</h2></a>
+       <p><strong>简介:</strong>刘仁静，笔名刘若水，1902-1987年，湖北应城人。北京党的早期组织成员。1918年考入北京大学。1929年曾拜会过托洛茨基，被中共开除党籍。1931年以个人身份加入统一的左派反对派组织，期间不时挑起各种争论，被称为“反对派中的反对派”“托派中的王明”。待陈独秀等中央领导成员被捕时，联合“青年布尔什维克”小集团，夺取了中央机关，开除陈独秀等原领导成员，使得中国左派反对派组织陷于瘫痪。1935年被捕，关押期间投降国民党。1950年在《人民日报》发表声明，承认错误。此后更名刘亦宇，长期担任人民出版社特约编辑。年任国务院参事室参事。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/luozhanglong.html"><h2>罗章龙</h2></a>
+      <p><strong>简介:</strong> 罗章龙，原名罗璈阶，1896年-1995年，湖南浏阳人。北京党的早期组织成员。中共第三届中央委员和中央局成员。四届候补中央委员。五、六届中央委员。中共六届四中全会后，因成立“中央非常委员会”分裂党，1931年1月27日被开除党籍。后任湖南大学教授等职。新中国成立后曾任全国政协委员等职。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/maozedong.html"><h2>毛泽东</h2></a>
+      <p><strong>简介:</strong> 毛泽东，字润之，原作咏芝，后改润芝，笔名子任，1893年—1976年，湖南湘潭人。无产阶级革命家、战略家、理论家，湖南长沙党的早期组织成员。1918年秋至1919年春在北京大学图书馆任职，并在北京大学旁听。中国共产党、中国人民解放军和中华人民共和国的主要缔造者和领袖。为中国各族人民解放事业的胜利，为中国社会主义事业的发展建立了不朽的功勋。论著编为《毛泽东选集》、《毛泽东文集》、《建国以来毛泽东文稿》等。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/Shenyanbing.html"><h2>沈雁冰；茅盾</h2></a>
+      <p data-type="origin"><strong>籍贯:</strong> 浙江，桐乡</p>
+      <p data-type="keywords"><strong>关键词:</strong> 上海共产主义小组；革命作家      </p>
+      <p><strong>简介:</strong>沈雁冰，原名沈德鸿，笔名茅盾、郎损、玄珠、方璧、止敬、蒲牢、微明、沈仲方、沈明甫等，字雁冰，1896年-1981年，浙江桐乡人。笔名茅盾。作家、社会活动家、学部委员，上海党的早期组织成员。北京大学预科毕业。1921年参与发起成立“文学研究会”。创作小说《蚀》三部曲、《虹》、《子夜》等。中华人民共和国成立后，历任中国作家协会主席、文化部部长和全国政协副主席等。在小说创作、文艺理论、文艺批评及中外文化交流等领域均做出重要贡献。著作编为《茅盾全集》。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/tanpingshan.html"><h2>谭平山      </h2></a>
+      <p><strong>简介:</strong>谭平山，1886年-1956年，广东高明人。广州党的早期组织成员。中共三、四、五届中央委员，三届中央局委员，五届中央政治局委员。参加了南昌起义。1927年11月在中共临时中央政治局扩大会议上被不适当地开除党籍。新中国成立后曾任政务院人民监察委员会主任等职。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/tanzhitang.html"><h2>谭植棠</h2></a>
+      <p><strong>简介:</strong>谭植棠，1893-1952年，广东高明人。广州党的早期组织成员。后被定为“阶级异己分子”清除出党</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/wangmingqiu.html"><h2>王鸣球</h2></a>
+      <p><strong>简介:</strong>王鸣球，字翔千，1888年-1956年，山东诸城人。济南党的早期组织成员。1907年考入京师译学馆戊级德文班。曾任《山东劳动周刊》主编、《晨钟报》主笔。与党失联后以教书为生，作了许多进步思想的有益宣传工作。新中国成立后，当选为山东省各界人民代表会议代表、山东省政协委员。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/wuyuming.html"><h2>吴雨铭</h2></a>
+      <p><strong>简介:</strong> 吴雨铭，1898年-1959年，湖南长沙人。北京党的早期组织成员。曾担任中国劳动组合书记部北方分部京汉铁路特派员。1931年成为“中央非常委员会”骨干，被开除党籍。1940年加入国民党。1949年到景德镇公安局自首，判无期徒刑，后死于狱中。
+      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/yuanzhenying.html"><h2>袁振英</h2></a>
+      <p><strong>简介:</strong> 袁振英，1894年-1979年，广东东莞人。上海党的早期组织成员。1915年秋天考入北京大学文科学院。北大唯一在陈独秀主编的杂志上发表文章的学生，得到陈独秀的赏识，同时也是上海社会主义青年团创始人之一。1921年8月前往法国里昂中法大学学习，从此离开了党组织。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/zhangguotao.html"><h2>张国焘</h2></a>
+      <p><strong>简介:</strong>张国焘，1897年-1979年，江西萍乡人。北京党的早期组织成员。1916年考入北京大学。中共早期重要领导人，中共一大代表并当选为中央局成员。曾任红军总政委等职，后曾任陕甘宁边区政府代主席等职。1924年，在北京被捕后出卖了陈独秀、李大钊及中共北方各组织；出狱后隐瞒变节事实，继续担任中共的核心领导人。自恃军权在握，另立中央，后在党内斗争中失势，被迫解散第二中央，并交出军权。1938年4月投入国民党特务集团，被开除党籍。晚年饥寒交迫，曾多次悔过欲返回大陆，但最后又自我放弃。1979年冻死在一家养老院中。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/zhangshenfu.html"><h2>张申府</h2></a>
+      <p><strong>简介:</strong>张申府，1893年-1986年，河北献县人。旅法党的早期组织成员。1920年至1921年曾在法国巴黎发起组织党的早期组织。回国后曾任黄埔军校政治部主任等职，1925年退党。华北各界救国会负责人之一。新中国成立后曾任北京图书馆研究员、全国政协委员等职。      </p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/zhangtailei.html"><h2>张太雷</h2></a>
+      <p><strong>简介:</strong>张太雷，1898—1927年，江苏常州人。革命家，北京党的早期组织成员。1915年入北京大学学习。中国社会主义青年团（1925年改称中国共产主义青年团）的主要领导人之一。1927年7月任中共中央临时政治局常委，同年10月主持中共南方局工作；12月11日参与领导广州起义，任广州苏维埃政府代主席兼人民海陆军委员，12日在战斗中牺牲。</p>
+    </div>
+
+    <div class="person">
+      <a href="../../../pages_renwu/zhuwushan.html"><h2>朱务善</h2></a>
+      <p><strong>简介:</strong>朱务善，1896年-1971年，湖南津市人。北京党的早期组织成员。1919年考入北京大学。曾任中共北方区委委员兼任《民报》国内新闻编辑。</p>
+    </div>
+
+</body>
+</html>
