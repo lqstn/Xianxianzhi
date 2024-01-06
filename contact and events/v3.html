@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/china.js"></script>
+
+</head>
+<body >
+    <div id="32ed602394864ea3b301d6604afc2fca" class="chart-container" style="width:1425px; height:760px; "></div>
+    <script>
+        var chart_32ed602394864ea3b301d6604afc2fca = echarts.init(
+            document.getElementById('32ed602394864ea3b301d6604afc2fca'), 'white', {renderer: 'canvas'});
+        var option_32ed602394864ea3b301d6604afc2fca = {
+    "baseOption": {
+        "series": [
+            {
+                "type": "effectScatter",
+                "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                "coordinateSystem": "geo",
+                "showEffectOn": "render",
+                "rippleEffect": {
+                    "show": true,
+                    "brushType": "stroke",
+                    "scale": 2.5,
+                    "period": 4
+                },
+                "symbolSize": 35,
+                "data": [
+                    {
+                        "name": "\u5317\u4eac",
+                        "value": [
+                            116.407526,
+                            39.90403,
+                            null
+                        ]
+                    }
+                ],
+                "label": {
+                    "show": true,
+                    "color": "#fffaf4",
+                    "margin": 8,
+                    "formatter": "{b}"
+                }
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "currentIndex": 0,
+            "orient": "horizontal",
+            "autoPlay": true,
+            "controlPosition": "left",
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": false,
+            "playInterval": 2100,
+            "bottom": 30,
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid",
+                "color": "#670001"
+            },
+            "label": {
+                "show": true,
+                "color": "#94070A",
+                "margin": 8
+            },
+            "itemStyle": {
+                "color": "#670001"
+            },
+            "progress": {},
+            "data": [
+                "1915\u5e74",
+                "1919\u5e74",
+                "1920\u5e74",
+                "1921\u5e74",
+                "1922\u5e74",
+                "1923\u5e74",
+                "1924\u5e74",
+                "1925\u5e74",
+                "1927\u5e74",
+                "1945\u5e74",
+                "1949\u5e74"
+            ]
+        },
+        "geo": {
+            "map": "china",
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "itemStyle": {
+                "color": "#fffaf4",
+                "borderColor": "#94070A"
+            },
+            "emphasis": {}
+        },
+        "legend": [
+            {
+                "data": [
+                    "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9"
+                ],
+                "selected": {},
+                "show": true,
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14,
+                "backgroundColor": "transparent",
+                "borderColor": "#ccc",
+                "borderWidth": 1,
+                "borderRadius": 0,
+                "pageButtonItemGap": 5,
+                "pageButtonPosition": "end",
+                "pageFormatter": "{current}/{total}",
+                "pageIconColor": "#2f4554",
+                "pageIconInactiveColor": "#aaa",
+                "pageIconSize": 15,
+                "animationDurationUpdate": 800,
+                "selector": false,
+                "selectorPosition": "auto",
+                "selectorItemGap": 7,
+                "selectorButtonGap": 10,
+                "textStyle": {
+                    "color": "#670001"
+                }
+            }
+        ]
+    },
+    "options": [
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u4e0a\u6d77",
+                            "value": [
+                                121.473701,
+                                31.230416,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1915\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u5317\u4eac",
+                            "value": [
+                                116.407526,
+                                39.90403,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1919\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u4e0a\u6d77",
+                            "value": [
+                                121.473701,
+                                31.230416,
+                                2.0
+                            ]
+                        },
+                        {
+                            "name": "\u4e0a\u6d77",
+                            "value": [
+                                121.473701,
+                                31.230416,
+                                2.0
+                            ]
+                        },
+                        {
+                            "name": "\u5317\u4eac",
+                            "value": [
+                                116.407526,
+                                39.90403,
+                                1.0
+                            ]
+                        },
+                        {
+                            "name": "\u5317\u4eac",
+                            "value": [
+                                116.407526,
+                                39.90403,
+                                1.0
+                            ]
+                        },
+                        {
+                            "name": "\u6b66\u660c",
+                            "value": [
+                                114.3,
+                                30.57,
+                                1.0
+                            ]
+                        },
+                        {
+                            "name": "\u957f\u6c99",
+                            "value": [
+                                113,
+                                28.21,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1920\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u4e0a\u6d77",
+                            "value": [
+                                121.473701,
+                                31.230416,
+                                1.0
+                            ]
+                        },
+                        {
+                            "name": "\u5e7f\u5dde",
+                            "value": [
+                                113.23,
+                                23.16,
+                                1.0
+                            ]
+                        },
+                        {
+                            "name": "\u6d4e\u5357",
+                            "value": [
+                                117,
+                                36.65,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1921\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u4e0a\u6d77",
+                            "value": [
+                                121.473701,
+                                31.230416,
+                                1.0
+                            ]
+                        },
+                        {
+                            "name": "\u5e7f\u5dde",
+                            "value": [
+                                113.23,
+                                23.16,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1922\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u5e7f\u5dde",
+                            "value": [
+                                113.23,
+                                23.16,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1923\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u5e7f\u5dde",
+                            "value": [
+                                113.23,
+                                23.16,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1924\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u4e0a\u6d77",
+                            "value": [
+                                121.473701,
+                                31.230416,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1925\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u6b66\u6c49",
+                            "value": [
+                                114.31,
+                                30.52,
+                                1.0
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1927\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u5ef6\u5b89",
+                            "value": [
+                                109.47,
+                                36.6,
+                                null
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1945\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        },
+        {
+            "backgroundColor": "#f0ebe5",
+            "series": [
+                {
+                    "type": "effectScatter",
+                    "name": "\u4e8b\u4ef6\u53d1\u751f\u5730\u70b9",
+                    "coordinateSystem": "geo",
+                    "showEffectOn": "render",
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    },
+                    "symbolSize": 35,
+                    "data": [
+                        {
+                            "name": "\u5317\u4eac",
+                            "value": [
+                                116.407526,
+                                39.90403,
+                                null
+                            ]
+                        }
+                    ],
+                    "label": {
+                        "show": true,
+                        "color": "#fffaf4",
+                        "margin": 8,
+                        "formatter": "{b}"
+                    }
+                }
+            ],
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e2d\u56fd\u5171\u4ea7\u515a\u5927\u4e8b\u8bb0",
+                    "target": "blank",
+                    "subtext": "1949\u5e74",
+                    "subtarget": "blank",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false,
+                    "textStyle": {
+                        "color": "#670001",
+                        "fontSize": 30
+                    },
+                    "subtextStyle": {
+                        "color": "#94070A",
+                        "fontSize": 22
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "color": [
+                "#670001",
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ]
+        }
+    ]
+};
+        chart_32ed602394864ea3b301d6604afc2fca.setOption(option_32ed602394864ea3b301d6604afc2fca);
+    </script>
+</body>
+</html>
