@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>先贤志</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    * {
+    box-sizing: border-box;
+    }
+
+    .body {
+    margin: 0;
+    }
+
+/* 设置页眉的样式 */
+.header {
+  background-color: #670000;
+  padding: 5px;
+}
+
+/* 设置顶部导航栏的样式 */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #d0d0d0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+  font-family: '楷体';
+  font-size: larger;
+}
+
+li a {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 8px 9px;
+  text-decoration: none;
+}
+/*改变鼠标悬停时的颜色*/
+li a:hover {
+  background-color: #d0d0d0;
+  color: rgb(67, 62, 62);
+}
+
+.active {
+  background-color: #b58080;
+  color: #000000;
+}
+
+/* 创建并排的非等列 */
+.column {
+  float: left;
+  width: 49%;
+  padding: 15px;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 响应式布局 - 堆叠而非并排 */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+.item1_building { grid-area: building; }
+.item2_por { grid-area: someone; }
+.item3_line { grid-area: timeline; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'building someone someone'
+    'building someone someone'
+    'building timeline timeline';
+  grid-gap: 0px;
+  padding: 5px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.intro{
+  width: 300px; 
+  height:340px; 
+  padding:5px; 
+  background-color: #670000; 
+  color: #d0d0d0;
+  float: left;
+}
+
+
+/*轮播图*/
+.d-block{
+  float: right;
+  width: 280px; 
+  height:350px; 
+  padding:5px; 
+}
+
+.carousel-item{
+  padding: 10px;
+}
+
+.por{
+  width: 280px;
+  margin-left: 5%;
+}
+
+.carousel-indicators{
+  position: relative;
+  top: 390px;
+}
+
+/*左右箭头*/
+#left,#right{
+  width:40px;
+  height: 70px;
+  font-size: 20px;
+  font-family: 微软雅黑;
+  text-align: center;
+  line-height: 70px;
+  opacity: 1;
+  color: #000000;
+}
+
+</style>
+</head>
+
+
+<body>
+<!--顶部页眉-->
+    <div class="header">
+      <div>
+        <img src="home/pictures/logo_title.png" alt="Logo_title" style="width:50%; padding:10px">
+      </div>
+    </div>
+<!--导航栏-->
+    <ul>
+      <li><a class="active" href="../home/home.html">首页</a></li>
+      <li><a href="search/search/search_index/search.html">搜索入口</a></li>
+      <li><a href="search/search/search_index/index_renwu.html">人物列表</a></li>
+      <li><a href="contact and events/events.html">历史事件</a></li>
+      <li><a href="contact and events/contact.html">联系我们</a></li>
+    </ul>
+
+<!--页面主体部分-->
+<div class="grid-container">
+<!--左侧北大红楼装饰图片-->
+        <div class="item1_building">
+          <img src="home/pictures/redbuilding.png" alt="Building" style="width: 400px; height:550px; margin:5px;">
+        </div>
+<!--人物简介版块-->
+        <div class="item2_someone">
+          <!-- 轮播 -->
+          <div id="portrait" class="carousel-slide" data-bs-ride="carousel">
+            <!-- 指标/点 -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#portrait" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#portrait" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#portrait" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#portrait" data-bs-slide-to="3"></button>
+              <button type="button" data-bs-target="#portrait" data-bs-slide-to="4"></button>
+              <button type="button" data-bs-target="#portrait" data-bs-slide-to="5"></button>
+            </div>
+  
+  <!-- 幻灯片/轮播 -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div  class="intro" alt="introduction">
+        <p style="font-size: 20px; font-family:'楷体'; text-align: left; padding: 5px;"><b>沈雁冰</b></p>
+        <p style="font-size: 14px; font-family:'楷体'; text-align: left; padding: 5px;">
+            茅盾（原名沈德鸿，1896年7月4日-1981年3月27日），字雁冰，浙江嘉兴桐乡人，中国现代著名作家、文学评论家、文化活动家以及社会活动家，新文化运动的先驱者、中国革命文艺的奠基人之一，代表作有《子夜》《春蚕》《夜读偶记》等。              早年考入北京大学预科，毕业后入商务印书馆工作。1949年后历任文化部部长，中国作家协会主席，全国文联副主席，《人民文学》、《译文》杂志主编，全国人大代表，全国政协副主席。1952年加入中国作家协会。1981年3月27日逝世。
+        </p>
+      </div>
+      <a href="pages_renwu/Shenyanbing.html">
+      <img src="home/pictures/portrait/shenyanbing.jpg" alt="沈雁冰" class="d-block"></a>
+    </div>
+
+    <div class="carousel-item">
+      <div  class="intro" alt="introduction">
+        <p style="font-size: 20px; font-family:'楷体'; text-align: left; padding: 5px;"><b>李季</b></p>
+        <p style="font-size: 14px; font-family:'楷体'; text-align: left; padding: 5px;">
+          李季（1892-1967）湖南平江人。马克思主义在中国的早期传播者之一，社会学家、翻译家，上海党的早期组织成员（后加入托派）。1918年毕业于北京大学英文系。1930年12月参加了陈独秀组织的81人签名并发表的《我们的意见书》。之后宣布退出托派组织，一心从事翻译和教学工作。从1918年至1964年从事译著工作，出版600万字以上。新中国成立后任国家出版总署特约翻译。著有《马克思——其生平、其著作及其学说》等；译有《社会主义史》、《马克思恩格斯通讯集》、《现代资本主义》等。
+        </p>
+      </div>
+      <a href="pages_renwu/liji.html">
+      <img src="home/pictures/portrait/liji.jpg" alt="李季" class="d-block"></a>
+    </div>
+
+    <div class="carousel-item">
+      <div  class="intro" alt="introduction">
+        <p style="font-size: 20px; font-family:'楷体'; text-align: left; padding: 5px;"><b>刘仁静</b></p>
+        <p style="font-size: 14px; font-family:'楷体'; text-align: left; padding: 5px;">
+          刘仁静（1902-1987）湖北应城人。北京党的早期组织成员。1918年考入北京大学。1929年曾拜会过托洛茨基，被中共开除党籍。1931年以个人身份加入统一的左派反对派组织，期间不时挑起各种争论，被称为“反对派中的反对派”“托派中的王明”。待陈独秀等中央领导成员被捕时，联合“青年布尔什维克”小集团，夺取了中央机关，开除陈独秀等原领导成员，使得中国左派反对派组织陷于瘫痪。1935年被捕，关押期间投降国民党。1950年在《人民日报》发表声明，承认错误。此后更名刘亦宇，长期担任人民出版社特约编辑。年任国务院参事室参事。
+        </p>
+      </div>
+      <a href="pages_renwu/liurenjing.html">
+      <img src="home/pictures/portrait/liurenjing.jpg" alt="刘仁静" class="d-block"></a>
+    </div>
+
+    <div class="carousel-item">
+      <div  class="intro" alt="introduction">
+        <p style="font-size: 20px; font-family:'楷体'; text-align: left; padding: 5px;"><b>毛泽东</b></p>
+        <p style="font-size: 14px; font-family:'楷体'; text-align: left; padding: 5px;">
+          毛泽东（1893—1976）湖南湘潭人。无产阶级革命家、战略家、理论家，湖南长沙党的早期组织成员。1918年秋至1919年春在北京大学图书馆任职，并在北京大学旁听。中国共产党、中国人民解放军和中华人民共和国的主要缔造者和领袖。为中国各族人民解放事业的胜利，为中国社会主义事业的发展建立了不朽的功勋。论著编为《毛泽东选集》、《毛泽东文集》、《建国以来毛泽东文稿》等。
+        </p>
+      </div>
+      <a href="pages_renwu/maozedong.html">
+      <img src="home/pictures/portrait/maozedong.jpg" alt="毛泽东" class="d-block"></a>
+    </div>
+    
+    <div class="carousel-item">
+      <div  class="intro" alt="introduction">
+        <p style="font-size: 20px; font-family:'楷体'; text-align: left; padding: 5px;"><b>陈公博</b></p>
+        <p style="font-size: 14px; font-family:'楷体'; text-align: left; padding: 5px;">
+          陈公博（1892-1946）广东南海人。广州党的早期组织成员。中共一大代表。1923年因投靠军阀陈炯明被开除党籍。1925年加入国民党。曾任国民革命军总司令部政务局局长等职。1938年随汪精卫叛国投敌。曾任汪伪政府立法院院长、伪国民政府代主席等职。抗战胜利后逃往日本。后被押解回国。
+        </p>
+      </div>
+      <a href="pages_renwu/chengongbo.html">
+      <img src="pictures/portrait/chengongbo.jpg" alt="陈公博" class="d-block"></a>
+    </div>
+
+    <div class="carousel-item">
+      <div  class="intro" alt="introduction">
+        <p style="font-size: 20px; font-family:'楷体'; text-align: left; padding: 5px;"><b>谭植棠</b></p>
+        <p style="font-size: 14px; font-family:'楷体'; text-align: left; padding: 5px;">
+          谭植棠（1893-1952）广东高明人。广州党的早期组织成员。后被定为“阶级异己分子”清除出党。
+        </p>
+      </div>
+      <a href="pages_renwu/tanzhitang.html">
+      <img src="home/pictures/portrait/tanzhitang.jpg" alt="谭植棠" class="d-block"></a>
+    </div>
+      <!-- 左右控件/图标 -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-inner" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel-inner" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  </div>
+  
+
+</div>
+<p style="font-family: 楷体;font-size: 16px;">（点击两侧箭头状按钮后，可敲击键盘左右键进行切换）</p>
+<!--演示时间轴-->
+        <div class="item3_line">
+            <img src="home/pictures/timeline.png" alt="Timeline" style="width:600px; padding:10px;">
+        </div>
+
+</div>
+
+</body>
+</html>
